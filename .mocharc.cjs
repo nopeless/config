@@ -1,0 +1,9 @@
+module.exports = {
+    "loader": "tsx",
+    "files": "test/**/*.spec.ts",
+    "recursive": true,
+    "extension": [
+        "ts"
+    ],
+    "require": "test/prelude.js"
+}

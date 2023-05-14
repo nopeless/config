@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        "types": [
+            "node",
+        ],
+        "lib": [
+            "ESNext",
+        ],
+        "target": "ESNext",
+        "module": "ESNext",
+        "esModuleInterop": true,
+        "outDir": "./dist",
+        "resolveJsonModule": true,
+        "allowJs": true,
+        "declaration": true,
+        "declarationMap": true,
+        "moduleResolution": "node",
+        "strictNullChecks": true,
+        "strict": true,
+        "paths": {
+            "@src/*": [
+                "./src/*"
+            ],
+            "@src": [
+                "./src/index"
+            ]
+        }
+    },
+    "include": [
+        "./src/**/*.ts",
+    ],
+    "exclude": [
+        "./node_modules",
+        "/archive/*"
+    ],
+}
