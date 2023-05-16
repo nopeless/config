@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "baseUrl": ".",
         "types": [
             "node",
         ],
@@ -9,7 +10,7 @@
         "target": "ESNext",
         "module": "ESNext",
         "esModuleInterop": true,
-        "outDir": "./dist",
+        "outDir": "dist",
         "resolveJsonModule": true,
         "allowJs": true,
         "declaration": true,
@@ -19,18 +20,17 @@
         "strict": true,
         "paths": {
             "@src/*": [
-                "./src/*"
+                "src/*"
             ],
             "@src": [
-                "./src/index"
+                "src/index"
             ]
         }
     },
     "include": [
-        "./src/**/*.ts",
+        "src/**/*.ts"
     ],
     "exclude": [
-        "./node_modules",
-        "/archive/*"
+        "node_modules"
     ],
 }
