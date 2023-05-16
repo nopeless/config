@@ -13,5 +13,15 @@
     "eslint.validate": [
         "javascript",
         "typescript"
-    ]
+    ],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/tsconfig.tsbuildinfo": true,
+        "**/yarn.lock": true
+    }
 }

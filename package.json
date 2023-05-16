@@ -2,16 +2,18 @@
   "name": "nopeless-config",
   "version": "1.2.0",
   "description": "configurations that I use",
-  "main": "index.js",
   "type": "module",
   "exports": {
     "./tsconfig.json": "./tsconfig.json",
+    "./test/tsconfig.json": "./test/tsconfig.json",
     "./.eslintrc.*": "./.eslintrc.*",
-    "./mocharc.*": "./mocharc.*"
+    "./.mocharc.*": "./.mocharc.*"
   },
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "mocha",
-    "test:coverage": "c8 mocha"
+    "test:coverage": "c8 mocha",
+    "build": "rimraf dist && tsc"
   },
   "repository": {
     "type": "git",

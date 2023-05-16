@@ -1,6 +1,8 @@
 {
     "compilerOptions": {
         "baseUrl": ".",
+        "rootDir": ".",
+        "outDir": "dist",
         "types": [
             "node",
         ],
@@ -8,29 +10,28 @@
             "ESNext",
         ],
         "target": "ESNext",
-        "module": "ESNext",
+        "composite": true,
         "esModuleInterop": true,
-        "outDir": "dist",
         "resolveJsonModule": true,
         "allowJs": true,
         "declaration": true,
         "declarationMap": true,
+        "skipDefaultLibCheck": true,
+        "skipLibCheck": true,
+        "module": "ESNext",
         "moduleResolution": "node",
         "strictNullChecks": true,
         "strict": true,
         "paths": {
-            "@src/*": [
-                "src/*"
-            ],
-            "@src": [
-                "src/index"
+            "nopeless-config": [
+                "./src/index.ts"
             ]
         }
     },
     "include": [
-        "src/**/*.ts"
+        "./src/**/*.ts"
     ],
     "exclude": [
-        "node_modules"
+        "**/node_modules"
     ],
 }

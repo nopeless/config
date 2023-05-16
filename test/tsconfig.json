@@ -1,14 +1,18 @@
 {
     "extends": "../tsconfig.json",
     "compilerOptions": {
+        "noEmit": true,
         "types": [
-            "chai",
-            "chai-as-promised",
-            "mocha",
             "node",
+            "mocha",
+            "chai",
+            "chai-as-promised"
         ]
     },
     "include": [
-        "**/*.ts",
+        "../src/**/*.ts",
+        "../test/prelude.*",
+        "../test/**/*.test.ts",
+        "../test/**/*.spec.ts"
     ]
 }
