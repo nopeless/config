@@ -4,8 +4,7 @@
   "description": "configurations that I use",
   "type": "module",
   "exports": {
-    "./tsconfig.json": "./tsconfig.json",
-    "./test/tsconfig.json": "./test/tsconfig.json",
+    "./tsconfig.*.json": "./tsconfig.*.json",
     "./.eslintrc.*": "./.eslintrc.*",
     "./.mocharc.*": "./.mocharc.*"
   },

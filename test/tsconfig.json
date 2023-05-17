@@ -1,15 +1,12 @@
 {
-    "extends": "../tsconfig.json",
+    "extends": [
+        "../tsconfig.json",
+        "../tsconfig.test.json"
+    ],
     "compilerOptions": {
         // project root
         "rootDir": "../",
-        "noEmit": true,
-        "types": [
-            "node",
-            "mocha",
-            "chai",
-            "chai-as-promised"
-        ]
+        "noEmit": true
     },
     "include": [
         "../**/*.ts"
