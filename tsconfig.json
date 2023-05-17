@@ -1,37 +1,13 @@
 {
+    "extends": "./tsconfig.base.json",
     "compilerOptions": {
-        "baseUrl": ".",
-        "rootDir": ".",
-        "outDir": "dist",
-        "types": [
-            "node",
-        ],
-        "lib": [
-            "ESNext",
-        ],
-        "target": "ESNext",
-        "composite": true,
-        "esModuleInterop": true,
-        "resolveJsonModule": true,
-        "allowJs": true,
-        "declaration": true,
-        "declarationMap": true,
-        "skipDefaultLibCheck": true,
-        "skipLibCheck": true,
-        "module": "ESNext",
-        "moduleResolution": "node",
-        "strictNullChecks": true,
-        "strict": true,
         "paths": {
-            "nopeless-config": [
-                "./src/index.ts"
-            ]
+            "@src": [
+                "./src",
+            ],
         }
     },
     "include": [
         "./src/**/*.ts"
-    ],
-    "exclude": [
-        "**/node_modules"
-    ],
+    ]
 }

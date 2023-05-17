@@ -1,4 +1,4 @@
-import { test } from "nopeless-config";
+import { test } from "@src";
 
 describe(`main`, function () {
   it(`should work`, function () {

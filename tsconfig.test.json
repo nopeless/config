@@ -1,8 +1,5 @@
 {
-    "extends": "../tsconfig.json",
     "compilerOptions": {
-        // project root
-        "rootDir": "../",
         "noEmit": true,
         "types": [
             "node",
@@ -10,8 +7,5 @@
             "chai",
             "chai-as-promised"
         ]
-    },
-    "include": [
-        "../**/*.ts"
-    ]
+    }
 }
