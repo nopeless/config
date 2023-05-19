@@ -34,6 +34,7 @@ export function createConfig(
       }),
     ],
     test: {
+      reporters: `verbose`,
       bail: 1,
       globals: true,
       watch: false,
