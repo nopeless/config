@@ -4,6 +4,10 @@ import { relative, resolve } from "path";
 import fs from "node:fs";
 import typescript, { readConfigFile } from "typescript";
 
+type UserConfigWithTest = UserConfig & {
+  test: Exclude<UserConfig[`test`], undefined>;
+};
+
 /**
  * uses './test/tsconfig.json' as tsconfig by default
  *
@@ -19,7 +23,7 @@ export function createConfig(
      */
     experimentalViteAliasResolution?: string;
   } = {}
-): UserConfig {
+): UserConfigWithTest {
   // Force cast
   // @ts-ignore
   const config: UserConfig = defineConfig({
