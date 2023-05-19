@@ -1,10 +1,26 @@
 import { defineConfig } from "vite";
 import "vitest/config";
 import tsconfigPaths from "vite-tsconfig-paths";
-// import JSON5 from "json5";
+import { relative, resolve } from "path";
 import fs from "node:fs";
+import typescript, { readConfigFile } from "typescript";
 
-export function createConfig(options: { default?: boolean } = {}) {
+/**
+ * uses './test/tsconfig.json' as tsconfig by default
+ *
+ * This is used to inject aliases for vite to resolve
+ */
+export function createConfig(
+  options: {
+    default?: boolean;
+    tsconfig?: string;
+    /**
+     * experimental vite alias resolution.
+     * Supply the path to the root tsconfig
+     */
+    experimentalViteAliasResolution?: string;
+  } = {}
+) {
   const config = defineConfig({
     plugins: [
       tsconfigPaths({
@@ -17,7 +33,7 @@ export function createConfig(options: { default?: boolean } = {}) {
       globals: true,
       watch: false,
       typecheck: {
-        tsconfig: `./test/tsconfig.json`,
+        tsconfig: options.tsconfig ?? `./test/tsconfig.json`,
         include: [
           `./src/**/*.spec.ts`,
           `./test/**/*.spec.ts`,
@@ -28,6 +44,91 @@ export function createConfig(options: { default?: boolean } = {}) {
         registerNodeLoader: true,
       },
     },
+    ...(options.experimentalViteAliasResolution && {
+      resolve: {
+        alias: (() => {
+          console.log(`[experimental vite alias resolution] enabled`);
+          try {
+            const config = readConfigFile(
+              options.experimentalViteAliasResolution,
+              typescript.sys.readFile
+            );
+
+            const tsconfig = typescript.parseJsonConfigFileContent(
+              config,
+              typescript.sys,
+              `./`
+            );
+
+            const paths = tsconfig.raw.config.compilerOptions.paths;
+            const newPaths = Object.create(null);
+
+            const cwd = process.cwd();
+
+            const rel = relative(
+              cwd,
+              resolve(options.experimentalViteAliasResolution, `..`)
+            );
+
+            // eslint-disable-next-line prefer-const
+            for (let [k, arr] of Object.entries(paths) as [
+              string,
+              string[]
+            ][]) {
+              let isGlob = false;
+              if (k.includes(`*`)) {
+                // should contain at most one *
+                if (k.endsWith(`/*`)) {
+                  k = k.slice(0, -2);
+                  isGlob = true;
+                } else {
+                  console.warn(
+                    `[experimental vite alias resolution] cannot support non trailing glob for now, ignoring key: ${k}`
+                  );
+                  continue;
+                }
+              }
+
+              newPaths[k] = arr.map((p) =>
+                resolve(
+                  rel,
+                  isGlob
+                    ? (() => {
+                        if (p.endsWith(`/*`)) {
+                          return p.slice(0, -2);
+                        }
+                        console.warn(
+                          `[experimental vite alias resolution] ${p}, which is the value of ${k}, is not a glob. Not applying transformation`
+                        );
+                        return p;
+                      })()
+                    : p
+                )
+              );
+            }
+
+            console.log(
+              `[experimental vite alias resolution] paths (post transform): `,
+              { ...newPaths }
+            );
+
+            return newPaths;
+          } catch (e) {
+            console.log(
+              `[experimental vite alias resolution] error reading tsconfig.json`
+            );
+            console.log(
+              `[experimental vite alias resolution] path was: `,
+              options.experimentalViteAliasResolution
+            );
+            console.log(tsconfig);
+            console.log(tsconfig.raw.config);
+
+            throw e;
+          }
+        })(),
+      },
+    }),
   });
 
   if (options.default) {
