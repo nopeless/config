@@ -2,6 +2,7 @@
     "extends": "nopeless-config/tsconfig.base.json",
     "compilerOptions": {
         "rootDir": "./packages",
+        "outDir": "./dist",
         "paths": {
             "@lolcat/is-even/*": [
                 "./packages/is-even/src/*"
@@ -16,5 +17,11 @@
                 "./packages/resources/src/*"
             ]
         }
-    }
+    },
+    "exclude": [
+        "**/node_modules",
+        "**/dist",
+        "**/*.test.ts",
+        "**/*.spec.ts"
+    ]
 }
