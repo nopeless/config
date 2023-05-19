@@ -26,7 +26,7 @@ export function createConfig(
 ): UserConfigWithTest {
   // Force cast
   // @ts-ignore
-  const config: UserConfig = defineConfig({
+  const config: UserConfigWithTest = defineConfig({
     plugins: [
       tsconfigPaths({
         root: `.`,
