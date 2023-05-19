@@ -1,0 +1,20 @@
+{
+    "extends": "nopeless-config/tsconfig.base.json",
+    "compilerOptions": {
+        "rootDir": "./packages",
+        "paths": {
+            "@lolcat/is-even/*": [
+                "./packages/is-even/src/*"
+            ],
+            "@lolcat/is-odd/*": [
+                "./packages/is-odd/src/*"
+            ],
+            "@lolcat/is-what/*": [
+                "./packages/is-what/src/*"
+            ],
+            "@lolcat/resources/*": [
+                "./packages/resources/src/*"
+            ]
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "outDir": "./dist",
+        "rootDir": "./src"
+    },
+    "include": [
+        "src/**/*.ts",
+    ],
+    "exclude": [
+        "src/*.spec.ts"
+    ],
+    "references": [
+        {
+            "path": "../is-even"
+        },
+        {
+            "path": "../is-odd"
+        }
+    ]
+}

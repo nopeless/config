@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        // "baseUrl": ".",
+        "outDir": "./dist",
+        // ---
+        "types": [
+            "node"
+        ],
+        "lib": [
+            "ESNext"
+        ],
+        // ---
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "composite": true,
+        "declaration": true,
+        "declarationMap": true,
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "skipDefaultLibCheck": true,
+        "skipLibCheck": true,
+        "jsx": "preserve",
+        "target": "ESNext",
+        "isolatedModules": true,
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "strictNullChecks": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "exclude": [
+        "**/node_modules/**/*",
+        "**/__mocks__/**/*",
+        "**/__tests__/**/*"
+    ]
+}

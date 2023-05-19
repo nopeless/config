@@ -2,14 +2,26 @@
     "[typescript]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint",
         "editor.formatOnSave": true,
+        "editor.tabSize": 2
     },
     "[javascript]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint",
         "editor.formatOnSave": true,
+        "editor.tabSize": 2
     },
     "eslint.format.enable": true,
     "eslint.validate": [
         "javascript",
         "typescript"
-    ]
+    ],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        // "**/tsconfig.tsbuildinfo": true,
+        "**/yarn.lock": true
+    }
 }
