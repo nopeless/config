@@ -25,7 +25,35 @@ module.exports = {
     "security/detect-object-injection": `off`,
     "import-quotes/import-quotes": [`error`, `double`],
 
-    "import/extensions": [`error`, `never`],
+    "import/extensions": [
+      `error`,
+      `never`,
+      {
+        pattern: {
+          config: `always`,
+          json: `always`,
+          css: `always`,
+          svg: `always`,
+          png: `always`,
+          jpg: `always`,
+          jpeg: `always`,
+          gif: `always`,
+          mp4: `always`,
+          mp3: `always`,
+          woff: `always`,
+          woff2: `always`,
+          ttf: `always`,
+          eot: `always`,
+          md: `always`,
+          txt: `always`,
+          graphql: `always`,
+          yml: `always`,
+          yaml: `always`,
+          xml: `always`,
+          csv: `always`,
+        },
+      },
+    ],
 
     "array-callback-return": [
       `error`,
@@ -49,7 +77,7 @@ module.exports = {
     ],
     complexity: `warn`,
 
-    "spaced-comment": `error`,
+    "spaced-comment": [`error`, `always`, { markers: [`/`] }],
 
     "linebreak-style": [`error`, `unix`],
     semi: [`error`, `always`],

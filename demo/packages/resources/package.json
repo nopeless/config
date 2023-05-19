@@ -1,0 +1,14 @@
+{
+    "name": "@lolcat/resources",
+    "version": "1.0.0",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        },
+        "./primes": {
+            "import": "./dist/primes/index.js",
+            "types": "./dist/primes/index.d.ts"
+        }
+    }
+}

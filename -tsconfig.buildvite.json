@@ -1,0 +1,13 @@
+{
+    "extends": "./tsconfig.base.json",
+    "files": [
+        "./vite-config.ts"
+    ],
+    "compilerOptions": {
+        "composite": false,
+        "outDir": "dist",
+        "rootDir": ".",
+        "module": "commonjs",
+        "moduleResolution": "node"
+    }
+}
