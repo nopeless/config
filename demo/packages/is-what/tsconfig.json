@@ -16,6 +16,9 @@
         },
         {
             "path": "../is-odd"
+        },
+        {
+            "path": "../resources"
         }
     ]
 }
