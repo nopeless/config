@@ -13,6 +13,7 @@ export function createConfig(options: { default?: boolean } = {}) {
       }),
     ],
     test: {
+      bail: 1,
       globals: true,
       watch: false,
       typecheck: {
