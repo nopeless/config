@@ -4,4 +4,4 @@
 !.eslintrc.*
 !.mocharc.*
 !vite.config.ts
-!dist
+!dist/*
