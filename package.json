@@ -1,6 +1,6 @@
 {
   "name": "nopeless-config",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "configurations that I use",
   "exports": {
     "./tsconfig.*.json": "./tsconfig.*.json",
