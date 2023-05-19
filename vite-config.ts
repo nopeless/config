@@ -1,5 +1,4 @@
-import { defineConfig } from "vite";
-import "vitest/config";
+import { defineConfig, UserConfig } from "vitest/config";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { relative, resolve } from "path";
 import fs from "node:fs";
@@ -20,8 +19,10 @@ export function createConfig(
      */
     experimentalViteAliasResolution?: string;
   } = {}
-) {
-  const config = defineConfig({
+): UserConfig {
+  // Force cast
+  // @ts-ignore
+  const config: UserConfig = defineConfig({
     plugins: [
       tsconfigPaths({
         root: `.`,
