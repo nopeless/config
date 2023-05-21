@@ -74,7 +74,12 @@ module.exports = {
         ignoreDestructuring: true,
         ignoreImports: true,
         ignoreGlobals: false,
-        allow: [`^__`],
+        allow: [
+          `^__`,
+          // Allow things like
+          // SomeClass__someProperty
+          `(?:[A-Z]?[a-z]*)+__(?:[A-Z]?[a-z]*)+`,
+        ],
       },
     ],
     complexity: `warn`,
