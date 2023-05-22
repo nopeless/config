@@ -17,7 +17,12 @@ module.exports = {
     sourceType: `module`,
   },
   rules: {
-    "prettier/prettier": `warn`,
+    "prettier/prettier": [
+      `warn`,
+      {
+        // prettier options
+      },
+    ],
     "no-console": `off`,
     "func-names": `off`,
     "no-underscore-dangle": `off`,
