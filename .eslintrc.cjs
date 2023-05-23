@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   parser: `@typescript-eslint/parser`,
-  plugins: [`@typescript-eslint`, `import-quotes`, `import`, `prettier`],
+  plugins: [`@typescript-eslint`, `prettier`],
   extends: [
     `eslint:recommended`,
     `plugin:@typescript-eslint/eslint-recommended`,
@@ -28,37 +28,6 @@ module.exports = {
     "no-underscore-dangle": `off`,
     "jest/expect-expect": `off`,
     "security/detect-object-injection": `off`,
-    "import-quotes/import-quotes": [`error`, `double`],
-
-    "import/extensions": [
-      `error`,
-      `never`,
-      {
-        pattern: {
-          config: `always`,
-          json: `always`,
-          css: `always`,
-          svg: `always`,
-          png: `always`,
-          jpg: `always`,
-          jpeg: `always`,
-          gif: `always`,
-          mp4: `always`,
-          mp3: `always`,
-          woff: `always`,
-          woff2: `always`,
-          ttf: `always`,
-          eot: `always`,
-          md: `always`,
-          txt: `always`,
-          graphql: `always`,
-          yml: `always`,
-          yaml: `always`,
-          xml: `always`,
-          csv: `always`,
-        },
-      },
-    ],
 
     "array-callback-return": [
       `error`,
@@ -93,7 +62,7 @@ module.exports = {
 
     "linebreak-style": [`error`, `unix`],
     semi: [`error`, `always`],
-    quotes: [`error`, `backtick`],
+    quotes: `off`,
     indent: [`off`],
     "quote-props": [`error`, `as-needed`],
     strict: 0,
@@ -125,6 +94,7 @@ module.exports = {
         },
       },
     ],
+    "@typescript-eslint/quotes": [`error`, `backtick`],
 
     "no-trailing-spaces": `error`,
     "space-infix-ops": [`error`, { int32Hint: false }],
