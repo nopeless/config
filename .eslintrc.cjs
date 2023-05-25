@@ -37,7 +37,7 @@ module.exports = {
       },
     ],
     "no-duplicate-imports": `off`,
-    "@typescript-eslint/no-duplicate-imports": `error`,
+    "@typescript-eslint/no-duplicate-imports": `warn`,
 
     "no-promise-executor-return": `error`,
     "require-atomic-updates": `error`,
@@ -70,9 +70,9 @@ module.exports = {
     "linebreak-style": [`error`, `unix`],
     semi: [`error`, `always`],
     quotes: `off`,
-    indent: [`off`],
+    indent: `off`,
     "quote-props": [`error`, `as-needed`],
-    strict: 0,
+    strict: `error`,
     "comma-dangle": [
       `error`,
       {
