@@ -58,6 +58,13 @@ module.exports = {
     ],
     complexity: `warn`,
 
+    "prefer-const": [
+      `warn`,
+      {
+        destructuring: `all`,
+      },
+    ],
+
     "spaced-comment": [`error`, `always`, { markers: [`/`] }],
 
     "linebreak-style": [`error`, `unix`],
