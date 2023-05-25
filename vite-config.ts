@@ -1,8 +1,7 @@
 import { defineConfig, UserConfig } from "vitest/config";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { relative, resolve } from "path";
-import fs from "node:fs";
-import typescript, { readConfigFile } from "typescript";
+import typescript, { ParsedCommandLine, readConfigFile } from "typescript";
 
 type UserConfigWithTest = UserConfig & {
   test: Exclude<UserConfig[`test`], undefined>;
@@ -54,13 +53,15 @@ export function createConfig(
       resolve: {
         alias: (() => {
           console.log(`[experimental vite alias resolution] enabled`);
+
+          let tsconfig: ParsedCommandLine | undefined = undefined;
           try {
             const config = readConfigFile(
               options.experimentalViteAliasResolution,
               typescript.sys.readFile
             );
 
-            const tsconfig = typescript.parseJsonConfigFileContent(
+            tsconfig = typescript.parseJsonConfigFileContent(
               config,
               typescript.sys,
               `./`
@@ -127,8 +128,11 @@ export function createConfig(
               `[experimental vite alias resolution] path was: `,
               options.experimentalViteAliasResolution
             );
-            console.log(tsconfig);
-            console.log(tsconfig.raw.config);
+
+            if (tsconfig) {
+              console.log(tsconfig);
+              console.log(tsconfig.raw.config);
+            }
 
             throw e;
           }
@@ -145,9 +149,13 @@ export function createConfig(
   console.log(
     `[test.typecheck.include]  has been configured using tsconfig. check vite.config.ts for more information`
   );
-  const tsconfig = JSON.parse(fs.readFileSync(`./test/tsconfig.json`, `utf-8`));
+  const tsconfig = typescript.parseJsonConfigFileContent(
+    readConfigFile(`./test/tsconfig.json`, typescript.sys.readFile),
+    typescript.sys,
+    `./`
+  );
 
-  const includes: string[] = tsconfig.include;
+  const includes: string[] = tsconfig.raw.config.include;
 
   if (!includes) {
     throw new Error(`tsconfig.json must have include property`);
