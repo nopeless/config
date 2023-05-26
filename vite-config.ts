@@ -3,7 +3,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import { relative, resolve } from "path";
 import typescript, { ParsedCommandLine, readConfigFile } from "typescript";
 
-type UserConfigWithTest = UserConfig & {
+export type UserConfigWithTest = UserConfig & {
   test: Exclude<UserConfig[`test`], undefined>;
 };
 
@@ -77,7 +77,6 @@ export function createConfig(
               resolve(options.experimentalViteAliasResolution, `..`)
             );
 
-            // eslint-disable-next-line prefer-const
             for (let [k, arr] of Object.entries(paths) as [
               string,
               string[]
