@@ -26,7 +26,8 @@
         "moduleResolution": "bundler",
         "strictNullChecks": true,
         "strict": true,
-        "forceConsistentCasingInFileNames": true
+        "forceConsistentCasingInFileNames": true,
+        "noUncheckedIndexedAccess": true
     },
     "exclude": [
         "**/node_modules/**/*",
