@@ -102,6 +102,7 @@ module.exports = {
       },
     ],
     "@typescript-eslint/quotes": [`error`, `backtick`],
+    "@typescript-eslint/no-non-null-assertion": `off`,
 
     "no-trailing-spaces": `error`,
     "space-infix-ops": [`error`, { int32Hint: false }],
