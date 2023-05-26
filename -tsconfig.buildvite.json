@@ -8,6 +8,8 @@
         "outDir": "dist",
         "rootDir": ".",
         "module": "commonjs",
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "declaration": true,
+        "declarationMap": true
     }
 }
