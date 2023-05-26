@@ -4,6 +4,7 @@ module.exports = {
   plugins: [`@typescript-eslint`, `prettier`],
   extends: [
     `eslint:recommended`,
+    `plugin:eslint-comments/recommended`,
     `plugin:@typescript-eslint/eslint-recommended`,
     `plugin:@typescript-eslint/recommended`,
   ],
@@ -116,5 +117,8 @@ module.exports = {
         },
       },
     ],
+
+    "eslint-comments/no-aggregating-enable": `off`,
+    "eslint-comments/no-unused-disable": `error`,
   },
 };
