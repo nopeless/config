@@ -8,6 +8,8 @@
     "./.mocharc.*": "./.mocharc.*",
     "./vite-config": {
       "node": "./dist/vite-config.js",
+      "import": "./dist/vite-config.js",
+      "default": "./dist/vite-config.js",
       "types": "./dist/vite-config.d.ts"
     }
   },
