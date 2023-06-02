@@ -1,7 +1,9 @@
 import { defineConfig, UserConfig } from "vitest/config";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { relative, resolve } from "path";
-import typescript, { ParsedCommandLine, readConfigFile } from "typescript";
+import typescript from "typescript";
+const { readConfigFile } = typescript;
+import type { ParsedCommandLine } from "typescript";
 
 export type UserConfigWithTest = UserConfig & {
   test: Exclude<UserConfig[`test`], undefined>;
