@@ -3,5 +3,6 @@
 !.editorconfig
 !.eslintrc.*
 !.mocharc.*
-!vite.config.ts
+!vite-config.d.ts
 !dist/*
+!src/types/*
