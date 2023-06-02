@@ -1,6 +1,7 @@
 {
     "name": "@lolcat/is-what",
     "version": "1.0.0",
+    "type": "module",
     "exports": {
         ".": {
             "import": "./dist/index.js",
