@@ -7,8 +7,8 @@
         "composite": false,
         "outDir": "dist",
         "rootDir": ".",
-        "module": "commonjs",
-        "moduleResolution": "node",
+        "module": "ESNext",
+        "moduleResolution": "bundler",
         "declaration": true,
         "declarationMap": true
     }
