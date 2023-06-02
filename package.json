@@ -2,6 +2,7 @@
   "name": "nopeless-config",
   "version": "1.11.0",
   "description": "configurations that I use",
+  "type": "module",
   "exports": {
     "./tsconfig.*.json": "./tsconfig.*.json",
     "./.eslintrc.*": "./.eslintrc.*",
