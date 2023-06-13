@@ -12,7 +12,7 @@ module.exports = {
     es6: true,
     node: true,
   },
-  ignorePatterns: [`dist`, `-*`],
+  ignorePatterns: [`node_modules`, `dist`, `-*`],
   parserOptions: {
     ecmaVersion: 2022,
     sourceType: `module`,
