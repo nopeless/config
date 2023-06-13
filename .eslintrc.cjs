@@ -69,6 +69,7 @@ module.exports = {
     "spaced-comment": [`error`, `always`, { markers: [`/`] }],
     "no-empty-function": `off`,
     "@typescript-eslint/no-empty-function": `off`,
+    "@typescript-eslint/no-empty-interface": `warn`,
 
     "linebreak-style": [`error`, `unix`],
     semi: [`error`, `always`],
