@@ -53,7 +53,7 @@ module.exports = {
           `^__`,
           // Allow things like
           // SomeClass__someProperty
-          `(?:[A-Z]?[a-z]*)+__(?:[A-Z]?[a-z]*)+`,
+          `^(?:[A-Z]?[a-z]*)+__(?:[A-Z]?[a-z]*)+$`,
         ],
       },
     ],
