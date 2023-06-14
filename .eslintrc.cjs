@@ -121,7 +121,7 @@ module.exports = {
     "no-array-constructor": `error`,
     "no-else-return": `warn`,
     "no-useless-return": `warn`,
-    "prefer-arrow-callback": `error`,
+    "prefer-arrow-callback": `off`,
     "prefer-exponentiation-operator": `error`,
     radix: `error`,
     yoda: [`warn`, `never`, { onlyEquality: true }],
