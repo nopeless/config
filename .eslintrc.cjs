@@ -95,6 +95,38 @@ module.exports = {
       },
     ],
 
+    "operator-assignment": [`warn`],
+    eqeqeq: [
+      `error`,
+      `always`,
+      {
+        null: `ignore`,
+      },
+    ],
+    "dot-notation": `warn`,
+    "func-style": [
+      `warn`,
+      `declaration`,
+      {
+        allowArrowFunctions: true,
+      },
+    ],
+    "logical-assignment-operators": [
+      `warn`,
+      `always`,
+      {
+        enforceForIfStatements: true,
+      },
+    ],
+    "no-array-constructor": `error`,
+    "no-else-return": `warn`,
+    "no-useless-return": `warn`,
+    "prefer-arrow-callback": `error`,
+    "prefer-exponentiation-operator": `error`,
+    radix: `error`,
+    yoda: [`warn`, `never`, { onlyEquality: true }],
+    "no-cond-assign": `off`,
+
     "@typescript-eslint/no-explicit-any": `off`,
     "@typescript-eslint/ban-ts-comment": `off`,
     "@typescript-eslint/ban-types": [
@@ -123,5 +155,6 @@ module.exports = {
 
     "eslint-comments/no-aggregating-enable": `off`,
     "eslint-comments/no-unused-disable": `error`,
+    "eslint-comments/disable-enable-pair": [`error`, { allowWholeFile: true }],
   },
 };
