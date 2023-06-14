@@ -42,8 +42,9 @@
     "tsx": "^3.12.7",
     "typescript": "^5.0.4",
     "vite": "~4.3.7",
-    "vite-tsconfig-paths": "^4.2.0",
     "vitest": "^0.31.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "vite-tsconfig-paths": "^4.2.0"
+  }
 }
