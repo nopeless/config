@@ -1,6 +1,9 @@
 # Dev
 ?.*.*
 
+# IDE
+.vscode
+
 # Logs
 logs
 *.log
