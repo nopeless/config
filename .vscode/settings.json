@@ -9,6 +9,10 @@
         "editor.formatOnSave": true,
         "editor.tabSize": 2
     },
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+        "editor.formatOnSave": true
+    },
     "eslint.format.enable": true,
     "eslint.validate": [
         "javascript",
