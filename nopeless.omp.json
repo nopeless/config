@@ -32,7 +32,7 @@
           "type": "path"
         },
         {
-          "background": "#d6b291",
+          "background": "#B388FF",
           "background_templates": [
             "{{ if or (.Working.Changed) (.Staging.Changed) }}#ec8b32{{ end }}",
             "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#e64e00{{ end }}",
