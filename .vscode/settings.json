@@ -1,31 +1,37 @@
 {
-    "[typescript]": {
-        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-        "editor.formatOnSave": true,
-        "editor.tabSize": 2
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-        "editor.formatOnSave": true,
-        "editor.tabSize": 2
-    },
-    "[markdown]": {
-        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
-        "editor.formatOnSave": true
-    },
-    "eslint.format.enable": true,
-    "eslint.validate": [
-        "javascript",
-        "typescript"
-    ],
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/Thumbs.db": true,
-        // "**/tsconfig.tsbuildinfo": true,
-        "**/yarn.lock": true
-    }
+  "json.schemaDownload.enable": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+    "editor.formatOnSave": true
+  },
+  "[json][jsonc]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "EditorConfig.EditorConfig"
+  },
+  "eslint.format.enable": true,
+  "eslint.validate": [
+    "javascript",
+    "typescript"
+  ],
+  "editor.detectIndentation": false,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    // "**/tsconfig.tsbuildinfo": true,
+    "**/yarn.lock": true
+  }
 }
