@@ -32,6 +32,6 @@
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
     // "**/tsconfig.tsbuildinfo": true,
-    "**/yarn.lock": true
+    // "**/yarn.lock": true
   }
 }
