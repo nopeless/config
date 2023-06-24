@@ -29,12 +29,10 @@
           "powerline_symbol": "\ue0b0",
           "properties": {
             "folder_separator_icon": "/",
+            "hide_root_location": false,
             "home_icon": "~",
             "style": "full",
-            "max_depth": 3,
-            "mapped_locations": {
-              "C:\\": ""
-            }
+            "max_depth": 3
           },
           "style": "powerline",
           "template": " \uf74a {{ .Path }} ",
@@ -69,6 +67,38 @@
           "template": " \uf898 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
           "type": "node"
         },
+        // Too slow
+        // {
+        //   "type": "command",
+        //   "style": "powerline",
+        //   "alias": "Yarn",
+        //   "powerline_symbol": "",
+        //   "foreground": "#ffffff",
+        //   "background": "#2c8ebb",
+        //   "template": "  {{ .Output }} ",
+        //   "properties": {
+        //     "shell": "git-bash",
+        //     "command": "if [ -f yarn.lock ]; then yarn --version; fi"
+        //   }
+        // },
+        // {
+        //   "type": "command",
+        //   "style": "plain",
+        //   "alias": "NpmPackageLock",
+        //   "template": "{{ if 1 }}{{ end }}",
+        //   "properties": {
+        //     "shell": "git-bash",
+        //     "command": "test -f package-lock.json && echo 1"
+        //   }
+        // },
+        // {
+        //   "type": "npm",
+        //   "style": "powerline",
+        //   "powerline_symbol": "",
+        //   "foreground": "#ffffff",
+        //   "background": "#c53635",
+        //   "template": "{{ if .Segments.NpmPackageLock.Output }}   {{ .Full }} {{ end }}"
+        // },
         {
           "background": "#8ED1F7",
           "foreground": "#111111",
@@ -151,10 +181,11 @@
             "{{ if gt .Code 0 }}#000000{{ end }}"
           ],
           "properties": {
-            "always_enabled": true
+            "always_enabled": true,
+            "style": "lucky7"
           },
           "style": "plain",
-          "template": "<transparent>\ue0b0</> \ufbab{{ .FormattedMs }} ",
+          "template": "<transparent>\ue0b0</> 󱦟\u2800\b{{ .FormattedMs }} ",
           "type": "executiontime"
         },
         {
@@ -170,7 +201,7 @@
             "always_enabled": true
           },
           "style": "diamond",
-          "template": "{{ if gt .Code 0 }}\udb85\udc34 \b {{ else }}\uf7d4 {{ end }}",
+          "template": "{{ if gt .Code 0 }}\udb81\udf59  \b{{ else }}\udb86\udca0  \b{{ end }}",
           "trailing_diamond": "\ue0b4",
           "type": "exit"
         }
