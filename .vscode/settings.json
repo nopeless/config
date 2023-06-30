@@ -1,5 +1,7 @@
 {
   "json.schemaDownload.enable": true,
+  // tab size here
+  "editor.tabSize": 2,
   "[typescript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.formatOnSave": true,
