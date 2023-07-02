@@ -87,7 +87,7 @@
       --button-outline-danger-border-hover: #ec2691;
       --button-outline-danger-background-hover: #e31e8a;
       --button-outline-danger-border-active: #ff3ca6;
-      --button-outline-danger-background-active: #ff33a2;
+      --button-outline-danger-background-active: #b31169;
       --button-danger-background: #860040;
 
 
@@ -143,6 +143,10 @@
     svg.mask-1y0tyc > rect:not([fill=transparent]) {
       fill: pink;
     }
+    /* discord has this weird bug, so this is a patch to that bug */
+    svg.cursorDefault-2M8ZNp > rect {
+      fill: pink;
+    }
 
     /* article backgrounds */
     article.embedWrapper-1MtIDg {
@@ -170,9 +174,13 @@
       background-color: transparent !important;
     }
 
-    /* star */
+    /* gif star */
     svg.icon-1m_PLf {
       color: #ee69ee;
+    }
+
+    div.colorDanger-3umuSx:active:not(.hideInteraction-1vQrZJ) {
+      background-color: var(--button-outline-danger-background-hover);
     }
 
     /* ===== text transforms ===== */
