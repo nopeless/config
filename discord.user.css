@@ -1,154 +1,197 @@
-/* ==UserStyle==
-@name           nopeless discord theme
-@namespace      github.com/nopeless/config
-@version        0.1.0
-@description    Discord theme I use
-@author         nopeless
-==/UserStyle== */
-@-moz-document domain("discord.com") {
-  .theme-dark {
-    --font-primary: "Choco cooky", "Brush Script MT";
-    /* chat background */
-    --background-primary: black;
-    /* channels background */
-    --background-secondary: black;
-    --background-modifier-selected: #9f356966;
+  /* ==UserStyle==
+  @name           nopeless discord theme
+  @namespace      github.com/nopeless/config
+  @version        0.1.0
+  @description    Discord theme I use
+  @author         nopeless
+  ==/UserStyle== */
+  @-moz-document domain("discord.com") {
+    .theme-dark {
+      --font-primary: "Choco cooky", "Brush Script MT";
+      /* chat background */
+      --background-primary: #120710;
+      /* channels background */
+      --background-secondary: #120710;
+      --background-modifier-selected: #9f356966;
 
-    /* profile under channels */
-    --background-secondary-alt: black;
-    /* server selection background */
-    --background-tertiary: black;
+      /* profile under channels */
+      --background-secondary-alt: #120710;
+      /* server selection background */
+      --background-tertiary: #120710;
 
-    /* 10 New messages */
-    --text-brand: #f9a0b6;
+      /* right click menu */
+      --background-floating: #120710;
 
-    --mention-foreground: white;
-    --mention-background: rgba(255, 183, 190, .66);
+      /* 10 New messages */
+      --text-brand: #f9a0b6;
 
-    --background-mentioned: rgba(255, 0, 210, .17);
-    /* left orange vertical bar for mentions */
-    --info-warning-foreground: purple;
+      --home-background: #120710;
 
-    /*   --divider-color: purple; */
-    /* this provides divider color */
-    --status-danger: #9b3d9b;
+      --mention-foreground: white;
+      --mention-background: rgba(255, 183, 190, .66);
 
-    --font-code: "Fira Code", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+      --background-mentioned: rgba(255, 0, 210, .17);
+      --background-mentioned-hover: rgba(255, 0, 210, .25);
+      /* left orange vertical bar for mentions */
+      --info-warning-foreground: purple;
 
-    /* Certain badge icons */
-    --text-positive: #ff8298;
+      /*   --divider-color: purple; */
+      /* this provides divider color */
+      --status-danger: #9b3d9b;
 
-    /* message input field */
-    --channeltextarea-background: #281921;
-    /* Message #general */
-    --channel-text-area-placeholder: #ccc;
+      --font-code: "Fira Code", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 
-    /* menu select */
-    --brand-experiment-560: #cc919c;
-    /* invite people icon color */
-    --brand-experiment-360: pink;
-    /* +unread messages */
-    --brand-experiment: #bd8891;
+      /* Certain badge icons */
+      --text-positive: #ff8298;
 
-    /* icon colors */
-    --brand-500: #ea4aa2;
+      /* message input field */
+      --channeltextarea-background: #281921;
+      /* Message #general */
+      --channel-text-area-placeholder: #ccc;
 
-    /* button colors */
-    --button-outline-positive-text: pink;
-    --button-outline-positive-border: pink;
+      /* menu select */
+      --brand-experiment-560: #cc919c;
+      /* invite people icon color */
+      --brand-experiment-360: pink;
+      /* +unread messages */
+      --brand-experiment: #bd8891;
 
-    --button-outline-positive-background-active: #ca7bbb;
-    --button-outline-positive-border-active: #ec93df;
-    --button-positive-background: #aa717b;
-    --button-positive-background-active: #d99aa5;
-    --button-positive-background-hover: #d99aa5;
+      /* icon colors */
+      --brand-500: #ea4aa2;
 
-    --button-outline-danger-border: #c10069;
-    --button-outline-danger-border-hover: #ec2691;
-    --button-outline-danger-background-hover: #e31e8a;
-    --button-outline-danger-border-active: #ff3ca6;
-    --button-outline-danger-background-active: #ff33a2;
-    --button-danger-background: #860040;
+      /* button colors */
+      --button-outline-positive-text: pink;
+      --button-outline-positive-border: pink;
 
+      --button-outline-positive-background-active: #ca7bbb;
+      --button-outline-positive-border-active: #ec93df;
 
-    /* mention tab */
-    --primary-630: #22101a;
+      --button-positive-background: #aa717b;
+      --button-positive-background-disabled: #a0777e;
+      --button-positive-background-active: #d99aa5;
+      --button-positive-background-hover: #d99aa5;
 
-    /*   --scrollbar-auto-scrollbar-color-thumb: white; */
-    /*   --scrollbar-auto-scrollbar-color-track: white; */
-    /* scroll bar pill */
-    --scrollbar-auto-thumb: #ffd8d8;
-    --scrollbar-auto-track: #371224;
-    /*   --scrollbar-thin-thumb: white; */
-    /*   --scrollbar-thin-track: white; */
-    /* selected tab color */
-    --control-brand-foreground: #ffe5ea;
+      --button-outline-danger-border: #c10069;
+      --button-outline-danger-border-hover: #ec2691;
+      --button-outline-danger-background-hover: #e31e8a;
+      --button-outline-danger-border-active: #ff3ca6;
+      --button-outline-danger-background-active: #ff33a2;
+      --button-danger-background: #860040;
 
 
+      /* mention tab */
+      --primary-630: #22101a;
 
-    /* misc */
-    /* loading cube square rotating color */
-    --brand-experiment-400: pink;
+      /*   --scrollbar-auto-scrollbar-color-thumb: white; */
+      /*   --scrollbar-auto-scrollbar-color-track: white; */
+      /* scroll bar pill */
+      --scrollbar-auto-thumb: #ffd8d8;
+      --scrollbar-auto-track: #371224;
+      /*   --scrollbar-thin-thumb: white; */
+      /*   --scrollbar-thin-track: white; */
+      /* selected tab color */
+      --control-brand-foreground: #ffe5ea;
 
-    /* menu click active */
-    --brand-experiment-600: pink;
+
+
+      /* misc */
+      /* loading cube square rotating color */
+      --brand-experiment-400: pink;
+
+      /* menu click active */
+      --brand-experiment-600: pink;
+      --text-link: #a462a4;
+    }
+
+    ::selection {
+      color: var(--background-primary);
+      background: #ca7cca;
+    }
+
+    code {
+      --background-secondary: #271025;
+    }
+
+    .mainCard-3KBsBI {
+      --background-primary: #271025;
+    }
+
+    /* ===== other style transforms ===== */
+    div.checked-16gMAN {
+      background-color: #bd8dbd !important;
+    }
+
+    /* user profile */
+    div.userPopoutOuter-1OHwPL {
+      /*     border: 2px solid #ffb4fa59; */
+      /*     border-radius: 10px; */
+    }
+
+    /* status icon: online, idle, phone */
+    svg.mask-1y0tyc > rect:not([fill=transparent]) {
+      fill: pink;
+    }
+
+    article.embedWrapper-1MtIDg {
+      background: #271025;
+    }
+
+    /* ===== text transforms ===== */
+    h2,
+    /* h3, */
+    h4,
+    h5,
+    h6,
+    span.unreadPill-3nEWYM,
+    /* right click menu sub categories */
+    div[role="menu"] > div > div > div > div.label-3CEiKJ,
+    div[role="menu"] > div > div > div > div > div.label-3CEiKJ,
+    div.text-xs-semibold-GgBYxI {
+      text-transform: lowercase !important;
+    }
+
+
+    /* channel categories */
+    div.overflow-1wOqNV,
+    /* roles */
+    h3.membersGroup-2eiWxl {
+      text-transform: none;
+    }
+
+    /* ===== mechanical transforms ===== */
+    span.unreadPill-3nEWYM {
+      border-radius: 0;
+      top: 0px;
+      padding: 0 5px 2px 5px;
+      height: 15px;
+      /*   transform: translateY(100%); */
+    }
+
+    /* pill shape */
+    span.unreadPill-3nEWYM > svg {
+      display: none;
+    }
+
+    /* highlights */
+    div[role="menu"] > div > div > div > div > div.label-3CEiKJ {
+      border-bottom: 1px dashed white;
+    }
+
+    div.scroller-15bIdk {
+      max-height: 300px;
+    }
+
+    div.groupStart-3Mlgv1:has(div.blockedSystemMessage-3FmE9n) {
+      display: none;
+    }
+
+    /* ===== text changes ===== */
+    div.placeholder-1rCBhr {
+      text-transform: lowercase;
+    }
+
+    div.placeholder-1rCBhr:before {
+      display: inline;
+      content: "owo "
+    }
   }
-
-  /* these don't apply to .theme-dark */
-  :root {
-    --text-link: #a462a4;
-  }
-
-  code {
-    --background-secondary: #130812;
-  }
-
-  /* ===== other color transforms ===== */
-  div.checked-16gMAN {
-    background-color: #bd8dbd !important;
-  }
-
-  /* ===== text transforms ===== */
-  h2,
-  /* h3, */
-  h4,
-  h5,
-  h6,
-  span.unreadPill-3nEWYM,
-  div[role="menu"] > div > div > div > div.label-3CEiKJ,
-  div[role="menu"] > div > div > div > div > div.label-3CEiKJ,
-  div.text-xs-semibold-GgBYxI {
-    text-transform: lowercase !important;
-  }
-
-
-
-  /* ===== mechanical transforms ===== */
-  span.unreadPill-3nEWYM {
-    border-radius: 0;
-    top: 0px;
-    padding: 0 5px 2px 5px;
-    height: 15px;
-    /*   transform: translateY(100%); */
-  }
-
-  /* pill shape */
-  span.unreadPill-3nEWYM > svg {
-    display: none;
-  }
-
-  /* highlights */
-  div[role="menu"] > div > div > div > div > div.label-3CEiKJ {
-    border-bottom: 1px dashed white;
-  }
-
-  /* ===== text changes ===== */
-  div.placeholder-1rCBhr {
-    text-transform: lowercase;
-  }
-
-  div.placeholder-1rCBhr:before {
-    display: inline;
-    content: "owo "
-  }
-}
