@@ -22,6 +22,9 @@
       /* right click menu */
       --background-floating: #120710;
 
+      /* popup e.g. click channel topic */
+      --modal-background: #120710;
+
       /* 10 New messages */
       --text-brand: #f9a0b6;
 
@@ -46,6 +49,7 @@
 
       /* message input field */
       --channeltextarea-background: #281921;
+      --input-background: #281921;
       /* Message #general */
       --channel-text-area-placeholder: #ccc;
 
