@@ -6,13 +6,22 @@
   @author         nopeless
   ==/UserStyle== */
   @-moz-document domain("discord.com") {
+    @font-face {
+      font-family: "Choco Cooky Online";
+      src: url(https://github.com/nopeless/config/raw/main/fonts/choco-cooky/Choco%20cooky%20Regular.ttf);
+    }
+
     .theme-dark {
-      --font-primary: "Choco cooky", "Brush Script MT";
+      --font-primary: "Choco Cooky", "Choco Cooky Online", "Comic Sans", "Comic Sans Ms";
+      --font-display: var(--font-primary);
       /* chat background */
       --background-primary: #120710;
       /* channels background */
       --background-secondary: #120710;
       --background-modifier-selected: #9f356966;
+
+      /* white half dots next to unread channels and their names */
+      --interactive-active: #c0f9ff;
 
       /* profile under channels */
       --background-secondary-alt: #120710;
@@ -38,7 +47,6 @@
       /* left orange vertical bar for mentions */
       --info-warning-foreground: purple;
 
-      /*   --divider-color: purple; */
       /* this provides divider color */
       --status-danger: #9b3d9b;
 
@@ -65,7 +73,7 @@
 
       /* button colors */
       --button-outline-positive-text: pink;
-      --button-outline-positive-border: pink;
+      --button-outline-positive-border: white;
 
       --button-outline-positive-background-active: #ca7bbb;
       --button-outline-positive-border-active: #ec93df;
@@ -136,8 +144,35 @@
       fill: pink;
     }
 
+    /* article backgrounds */
     article.embedWrapper-1MtIDg {
       background: #271025;
+    }
+
+    /* article default border-color */
+    article.embedWrapper-1MtIDg.embedFull-1HGV2S.embed-hKpSrO.markup-eYLPri {
+      border-color: #cf799a !important;
+    }
+
+    /* gif favorites background */
+    div.categoryFadeBlurple-1l49_Q {
+      background-color: var(--button-positive-background) !important;
+    }
+
+    div.categoryFadeBlurple-1l49_Q:hover {
+      background-color: var(--button-positive-background-hover) !important;
+    }
+
+
+    /* gif search result */
+    div.result-pzZrwj[style*="background-color"] {
+      background: linear-gradient(to bottom right, #8e3d9e, #ad3e64);
+      background-color: transparent !important;
+    }
+
+    /* star */
+    svg.icon-1m_PLf {
+      color: #ee69ee;
     }
 
     /* ===== text transforms ===== */
@@ -189,6 +224,17 @@
       display: none;
     }
 
+    /* allow jumbo emotes on compact */
+    div.compact-2Nkcau .messageContent-2t3eCI .emoji.jumboable {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    /* fix header for jumbo change above */
+    h3.header-2jRmjb {
+      vertical-align: top;
+    }
+
     /* ===== text changes ===== */
     div.placeholder-1rCBhr {
       text-transform: lowercase;
@@ -196,6 +242,22 @@
 
     div.placeholder-1rCBhr:before {
       display: inline;
-      content: "owo "
+      content: "owo ";
+    }
+
+    /* ===== image changes ===== */
+    /* joined arrow */
+    div.icon-JRJzJz.iconSize-Ai8Wtu {
+      filter: hue-rotate(180deg);
+    }
+
+    /* announcement channel bird house */
+    img.image-3FliiM {
+      filter: saturate(70%) hue-rotate(100deg);
+    }
+
+    /* # badge */
+    img.profileBadge22-3GAYRy.profileBadge-12r2Nm {
+      filter: sepia(100%) hue-rotate(160deg) saturate(200%);
     }
   }
