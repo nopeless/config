@@ -1,0 +1,150 @@
+.theme-dark {
+  --font-primary: "Choco cooky", "Brush Script MT";
+  /* chat background */
+  --background-primary: black;
+  /* channels background */
+  --background-secondary: black;
+  --background-modifier-selected: #9f356966;
+  
+  /* profile under channels */
+  --background-secondary-alt: black;
+  /* server selection background */
+  --background-tertiary: black;
+  
+  /* 10 New messages */
+  --text-brand: #f9a0b6;
+
+  --mention-foreground: white;
+  --mention-background: rgba(255, 183, 190, .66);
+  
+  --background-mentioned: rgba(255, 0, 210, .17);
+  /* left orange vertical bar for mentions */
+  --info-warning-foreground: purple;
+  
+/*   --divider-color: purple; */
+  /* this provides divider color */
+  --status-danger: #9b3d9b;
+  
+  --font-code: "Fira Code", Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
+  
+  /* Certain badge icons */
+  --text-positive: #ff8298;
+  
+  /* message input field */
+  --channeltextarea-background: #281921;
+  /* Message #general */
+  --channel-text-area-placeholder: #ccc;
+  
+  /* menu select */
+  --brand-experiment-560: #cc919c;
+  /* invite people icon color */
+  --brand-experiment-360: pink;
+  /* +unread messages */
+  --brand-experiment: #bd8891;
+  
+  /* icon colors */
+  --brand-500: #ea4aa2;
+  
+  /* button colors */
+  --button-outline-positive-text: pink;
+  --button-outline-positive-border: pink;
+  
+  --button-outline-positive-background-active: #ca7bbb;
+  --button-outline-positive-border-active: #ec93df;
+  --button-positive-background: #aa717b;
+  --button-positive-background-active: #d99aa5;
+  --button-positive-background-hover: #d99aa5;
+  
+  --button-outline-danger-border: #c10069;
+  --button-outline-danger-border-hover: #ec2691;
+  --button-outline-danger-background-hover: #e31e8a;
+  --button-outline-danger-border-active: #ff3ca6;
+  --button-outline-danger-background-active: #ff33a2;
+  --button-danger-background: #860040;
+  
+  
+  /* mention tab */
+  --primary-630: #22101a;
+  
+/*   --scrollbar-auto-scrollbar-color-thumb: white; */
+/*   --scrollbar-auto-scrollbar-color-track: white; */
+  /* scroll bar pill */
+  --scrollbar-auto-thumb: #ffd8d8;
+  --scrollbar-auto-track: #371224;
+/*   --scrollbar-thin-thumb: white; */
+/*   --scrollbar-thin-track: white; */
+  
+  
+  /* selected tab color */
+  --control-brand-foreground: #ffe5ea;
+  
+  
+  
+  /* misc */
+  
+  /* loading cube square rotating color */
+  --brand-experiment-400: pink;
+  
+  /* menu click active */
+  --brand-experiment-600: pink;
+}
+
+/* these don't apply to .theme-dark */
+:root {
+  --text-link: #a462a4;
+}
+
+code {
+  --background-secondary: #130812;
+}
+
+/* ===== other color transforms ===== */
+
+div.checked-16gMAN {
+  background-color: #bd8dbd !important;
+}
+
+/* ===== lowercase transforms ===== */
+h2,
+/* h3, */
+h4,
+h5,
+h6,
+span.unreadPill-3nEWYM,
+div[role="menu"] > div > div > div > div.label-3CEiKJ,
+div[role="menu"] > div > div > div > div > div.label-3CEiKJ,
+div.text-xs-semibold-GgBYxI
+{
+  text-transform: lowercase !important;
+}
+
+/* ===== mechanical transforms ===== */
+
+span.unreadPill-3nEWYM {
+  border-radius: 0;
+  top: 0px;
+  padding: 0 5px 2px 5px;
+  height: 15px;
+/*   transform: translateY(100%); */
+}
+
+/* pill shape */
+span.unreadPill-3nEWYM > svg {
+  display: none;
+}
+
+/* highlights */
+
+div[role="menu"] > div > div > div > div > div.label-3CEiKJ {
+  border-bottom: 1px dashed white;
+}
+
+/* ===== text changes ===== */
+div.placeholder-1rCBhr {
+  text-transform: lowercase;
+}
+
+div.placeholder-1rCBhr:before {
+  display: inline;
+  content: "owo "
+}
