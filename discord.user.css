@@ -268,4 +268,9 @@
     img.profileBadge22-3GAYRy.profileBadge-12r2Nm {
       filter: sepia(100%) hue-rotate(160deg) saturate(200%);
     }
+
+    /* QOL changes */
+    span.username-h_Y3Us[style="color: rgb(0, 0, 1);"] {
+      color: white !important;
+    }
   }
