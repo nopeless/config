@@ -1,7 +1,7 @@
   /* ==UserStyle==
   @name           nopeless discord theme
   @namespace      github.com/nopeless/config
-  @version        0.1.1
+  @version        0.1.2
   @description    Discord theme I use
   @author         nopeless
   ==/UserStyle== */
@@ -22,6 +22,9 @@
 
       /* white half dots next to unread channels and their names */
       --interactive-active: #c0f9ff;
+      --interactive-hover: #bfeef3;
+      --interactive-muted: #3f4d4f6b;
+      --interactive-normal: #ddedee;
 
       /* profile under channels */
       --background-secondary-alt: #120710;
@@ -56,7 +59,7 @@
       --text-positive: #ff8298;
 
       /* message input field */
-      --channeltextarea-background: #281921;
+      --channeltextarea-background: #1e1218;
       --input-background: #281921;
       /* Message #general */
       --channel-text-area-placeholder: #ccc;
@@ -128,6 +131,11 @@
       --background-primary: #271025;
     }
 
+    /* ===== Fixes ===== */
+    div.layerContainer-2lfOPe {
+      overflow: hidden;
+    }
+
     /* ===== other style transforms ===== */
     div.checked-16gMAN {
       background-color: #bd8dbd !important;
@@ -183,6 +191,11 @@
       background-color: var(--button-outline-danger-background-hover);
     }
 
+    /* ===== drag n drop ===== */
+    div.banner-1YaD3N.popoutBanner-3cqRD9 {
+      cursor: grab;
+    }
+
     /* ===== text transforms ===== */
     h2,
     /* h3, */
@@ -232,6 +245,11 @@
       display: none;
     }
 
+    /* hide buttons */
+    div.buttons-uaqb-5 {
+      display: none;
+    }
+
     /* allow jumbo emotes on compact */
     div.compact-2Nkcau .messageContent-2t3eCI .emoji.jumboable {
       width: 3rem;
@@ -243,9 +261,45 @@
       vertical-align: top;
     }
 
+    /* ===== message send area & scroller changes ===== */
+    /* compact messaging */
+    div.scroller-kQBbkU {
+      /*       margin-bottom: 60px; */
+    }
+    form.form-3gdLxP {
+      background: none;
+      position: absolute;
+      /*       margin-top: -128px;
+      padding-right: 30px; */
+      bottom: 0;
+      width: 100%;
+      padding-right: 20px;
+      margin-left: 0px;
+      box-sizing: border-box;
+    }
+    form.form-3gdLxP::before {
+      display: none;
+    }
+    div.scrollableContainer-15eg7h:has(div.placeholder-1rCBhr) {
+      background: none;
+      opacity: 0.2
+    }
+    div.scrollableContainer-15eg7h:has(div:focus) {
+      background: var(--channeltextarea-background);
+      opacity: 1;
+    }
+    div.inner-NQg18Y,
+    div.channelTextArea-1FufC0.channelTextArea-1VQBuV {
+      background: none;
+    }
+    div.scrollerSpacer-3AqkT9 {
+      height: 80px;
+    }
+
     /* ===== text changes ===== */
     div.placeholder-1rCBhr {
       text-transform: lowercase;
+      color: rgba(255, 255, 255, 0.3);
     }
 
     div.placeholder-1rCBhr:before {
@@ -273,12 +327,8 @@
     span.username-h_Y3Us[style="color: rgb(0, 0, 1);"] {
       color: white !important;
     }
-    
+
     div.sidebar-1tnWFu.collapsed {
       display: none;
-    }
-    
-    time {
-      visibility: hidden;
     }
   }
