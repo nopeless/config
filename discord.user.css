@@ -1,7 +1,7 @@
   /* ==UserStyle==
   @name           nopeless discord theme
   @namespace      github.com/nopeless/config
-  @version        0.1.0
+  @version        0.1.1
   @description    Discord theme I use
   @author         nopeless
   ==/UserStyle== */
@@ -272,5 +272,13 @@
     /* QOL changes */
     span.username-h_Y3Us[style="color: rgb(0, 0, 1);"] {
       color: white !important;
+    }
+    
+    div.sidebar-1tnWFu.collapsed {
+      display: none;
+    }
+    
+    time {
+      visibility: hidden;
     }
   }
