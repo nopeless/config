@@ -1,0 +1,13 @@
+/* ==UserStyle==
+@name           Youtube disable player gradient
+@namespace      github.com/openstyles/stylus
+@version        0.1.0
+@description    Disables youtube gradient
+@author         nopeless
+==/UserStyle== */
+
+@-moz-document url-prefix("https://www.youtube.com/watch?v=") {
+  div.ytp-gradient-bottom {
+    background-image: none !important;
+  }
+}
