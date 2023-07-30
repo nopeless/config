@@ -1,7 +1,7 @@
   /* ==UserStyle==
   @name           nopeless discord theme
   @namespace      github.com/nopeless/config
-  @version        0.1.2
+  @version        0.1.3
   @description    Discord theme I use
   @author         nopeless
   ==/UserStyle== */
@@ -268,7 +268,7 @@
     }
     form.form-3gdLxP {
       background: none;
-      position: absolute;
+      /*       position: absolute; */
       /*       margin-top: -128px;
       padding-right: 30px; */
       bottom: 0;
@@ -293,7 +293,7 @@
       background: none;
     }
     div.scrollerSpacer-3AqkT9 {
-      height: 80px;
+      /*       height: 80px; */
     }
 
     /* ===== text changes ===== */
