@@ -1,7 +1,7 @@
   /* ==UserStyle==
   @name           nopeless discord theme
   @namespace      github.com/nopeless/config
-  @version        0.1.5
+  @version        0.1.6
   @description    Discord theme I use
   @author         nopeless
   ==/UserStyle== */
@@ -274,7 +274,7 @@
     div.scroller-kQBbkU {
             margin-bottom: 60px;
     }
-    form.form-3gdLxP {
+    form.form-3qe0Ni {
       background: none;
       /*       position: absolute; */
       margin-top: -128px;
@@ -285,7 +285,7 @@
       margin-left: 0px;
       box-sizing: border-box;
     }
-    form.form-3gdLxP::before {
+    form.form-3qe0Ni::before {
       display: none;
     }
 /*     div.scrollableContainer-15eg7h:has(div.placeholder-1rCBhr){
