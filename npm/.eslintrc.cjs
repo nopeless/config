@@ -37,7 +37,7 @@ module.exports = {
         checkForEach: true,
       },
     ],
-    "import/no-duplicate": `warn`,
+    "import/no-duplicates": `warn`,
 
     "no-promise-executor-return": `error`,
     "require-atomic-updates": `error`,
