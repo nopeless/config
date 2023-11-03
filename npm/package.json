@@ -1,6 +1,6 @@
 {
   "name": "nopeless-config",
-  "version": "1.12.1",
+  "version": "1.12.2",
   "description": "configurations that I use",
   "type": "module",
   "exports": {
