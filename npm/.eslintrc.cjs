@@ -37,8 +37,7 @@ module.exports = {
         checkForEach: true,
       },
     ],
-    "no-duplicate-imports": `off`,
-    "@typescript-eslint/no-duplicate-imports": `warn`,
+    "import/no-duplicate": `warn`,
 
     "no-promise-executor-return": `error`,
     "require-atomic-updates": `error`,
