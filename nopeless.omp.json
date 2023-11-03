@@ -15,18 +15,16 @@
           "type": "session"
         },
         {
-          "background": "#66e0ff",
+          "background": "#44e0dd",
           "foreground": "#111111",
-          // "trailing_diamond": "\ue0b0",
-          // "powerline_symbol": "\ue0b0",
-          "style": "plain",
-          "template": "\b \ue70f admin <#66e0ff,transparent>\ue0b0</>",
+          "trailing_diamond": "\ue0b0",
+          "style": "diamond",
+          "template": " \ue70f admin ",
           "type": "root"
         },
         {
           "background": "#86afc0",
           "foreground": "#ffffff",
-          "powerline_symbol": "\ue0b0",
           "properties": {
             "folder_separator_icon": "/",
             "hide_root_location": false,
@@ -34,8 +32,9 @@
             "style": "full",
             "max_depth": 3
           },
+          "powerline_symbol": "\ue0b0",
           "style": "powerline",
-          "template": " \uf74a {{ .Path }} ",
+          "template": " \uf07b {{ .Path }} ",
           "type": "path"
         },
         {
@@ -64,7 +63,7 @@
             "fetch_version": true
           },
           "style": "powerline",
-          "template": " \uf898 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+          "template": "  {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
           "type": "node"
         },
         // Too slow
@@ -185,7 +184,7 @@
             "style": "lucky7"
           },
           "style": "plain",
-          "template": "<transparent>\ue0b0</> 󱦟\u2800\b{{ .FormattedMs }} ",
+          "template": "<transparent>\ue0b0</>  {{ .FormattedMs }} ",
           "type": "executiontime"
         },
         {
@@ -201,9 +200,9 @@
             "always_enabled": true
           },
           "style": "diamond",
-          "template": "{{ if gt .Code 0 }}\udb81\udf59  \b{{ else }}\udb86\udca0  \b{{ end }}",
+          "template": "{{ if gt .Code 0 }}{{ else }}{{ end }}",
           "trailing_diamond": "\ue0b4",
-          "type": "exit"
+          "type": "status"
         }
       ],
       "type": "prompt"
@@ -213,8 +212,11 @@
         {
           "background": "#f4b7a5",
           "foreground": "#000000",
-          "style": "plain",
-          "template": "<#f4b7a5,transparent>\ue0b6</> \uf489 {{ .Name }} <transparent,#f4b7a5>\ue0b2</>",
+          "style": "diamond",
+          "powerline_symbol": "\ue0b2",
+          "leading_diamond": "\ue0b6",
+          "invert_powerline": true,
+          "template": "\uf489 {{ .Name }} ",
           "type": "shell"
         },
         {
@@ -245,32 +247,12 @@
           "type": "ytm"
         },
         {
-          "background": "#ae858d",
-          "background_templates": [
-            "{{if lt .Percentage 20 }}#ff523b{{end}}",
-            "{{if or (eq \"Full\" .State.String) (gt .Percentage 99) }}#ae858d{{end}}",
-            "{{if eq \"Charging\" .State.String }}#4f9a8f{{end}}"
-          ],
-          "foreground": "#ffffff",
-          "invert_powerline": true,
-          "powerline_symbol": "\ue0b2",
-          "properties": {
-            "charged_icon": "\uf240 ",
-            "charging_icon": "\uf241 ",
-            "discharging_icon": "\uf243 ",
-            "not_charging_icon": "\uf240 "
-          },
-          "style": "powerline",
-          "template": "{{ if not .Error }}{{ if gt .Percentage 99 }}\uf240 {{ else }} {{ .Icon }} {{ .Percentage }}%{{end}}{{ end }}{{ .Error }} ",
-          "type": "battery"
-        },
-        {
           "background": "#6c6874",
           "foreground": "#ffffff",
           "invert_powerline": true,
           // "leading_diamond": "\ue0b2",
           "style": "diamond",
-          "template": " {{ .CurrentDate | date .Format }} ",
+          "template": " {{ .CurrentDate | date .Format }}",
           "trailing_diamond": "\ue0b4",
           "type": "time"
         }
